@@ -1,0 +1,420 @@
+@use "../../sass/main.scss" as *;
+@use "../../sass/theme/theme.scss" as *;
+@use "../../sass/typography/typography.scss" as *;
+
+.footer-section {
+    padding: 56px 0 119px;
+    background-color: $bg-color-ba;
+    color: $text-color-f8;
+    transition: 1s ease-in-out;
+
+    @media (max-width:766px) {
+        padding: 17px 8px;
+    }
+
+    .container3 {
+        max-width: 1280px;
+        margin: 0 auto;
+
+        .Footer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 130px;
+
+            @media (max-width:766px) {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 0;
+            }
+
+            .Footer-gridItems {
+
+                &:first-child {
+                    h4 {
+                        @include heading-120-outfit;
+                        letter-spacing: -5.4px;
+                        line-height: 140.8px;
+                        transition: 1s ease-in-out;
+
+                        @media (max-width:766px) {
+                            @include heading-64-outfit;
+                            letter-spacing: 0;
+                            margin: 0 0 11px;
+
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    @media (max-width:766px) {
+                        order: 3;
+                    }
+
+                    .Footer-twoColGrid {
+                        display: grid;
+                        grid-template-columns: 125px 1fr;
+                        gap: 52px;
+
+                        @media (max-width:766px) {
+                            padding: 40px 0 0;
+                            grid-template-columns: 1fr;
+                            gap: 0;
+                        }
+
+                        div {
+
+                            &:first-child {
+                                @media (max-width:766px) {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-wrap: wrap;
+                                    gap: 8px 16px;
+                                    border-top: 2px solid #fff;
+                                    border-bottom: 1px solid #fff;
+                                    padding: 22px 0;
+                                }
+
+                                p {
+                                    @include font-16-outfit;
+                                    margin: 0 0 8px;
+
+                                    @media (max-width:766px) {
+                                        display: none;
+                                    }
+                                }
+
+                                a {
+                                    display: block;
+                                    cursor: pointer;
+                                    @include font-16-outfit;
+                                    font-weight: 300;
+                                    padding: 0 0 8px;
+
+                                    @media (max-width:766px) {
+                                        padding: 0;
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                @media (max-width:766px) {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 12px;
+                                    justify-content: center;
+                                    padding: 22px;
+                                    border-bottom: 2px solid #fff;
+                                }
+
+                                p {
+                                    @include font-16-outfit;
+                                    margin: 0 0 8px;
+
+                                    @media (max-width:766px) {
+                                        display: none;
+                                    }
+                                }
+
+                                a {
+                                    display: block;
+                                    cursor: pointer;
+                                    @include font-16-outfit;
+                                    font-weight: 300;
+                                    padding: 0 0 8px;
+
+                                    @media (max-width:766px) {
+                                        padding: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(3) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+
+                    @media (max-width:766px) {
+                        padding: 22px 0;
+                        border-bottom: 2px solid #fff;
+                        order: 4;
+                    }
+
+                    .Footer-officeinformation {
+
+                        h5 {
+                            @include font-20-outfit;
+                            margin: 0 0 20px;
+
+                            @media (max-width:766px) {
+                                text-align: center;
+                            }
+                        }
+
+                        .Footer-social {
+                            padding: 0 0 10px;
+
+                            span {
+                                display: flex;
+                                gap: 5px;
+
+                                @media (max-width:766px) {
+                                    @include font-16-outfit;
+                                    justify-content: center;
+                                }
+
+                                a {
+                                    @include font-18-outfit;
+                                    font-weight: 500;
+                                    padding: 0 0 2px;
+
+                                    @media (max-width:766px) {
+                                        @include font-16-outfit;
+                                        justify-content: center;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .Footer-findContact {
+
+                        @media (max-width:766px) {
+                            width: 276px;
+                            margin: 0 auto;
+                        }
+
+                        button {
+                            width: 100%;
+                            background-color: #ba0000;
+                            padding: 0 32px;
+                            border-radius: 999px;
+                            border: 2px solid $border-color-f8;
+                            font-family: "Outfit", sans-serif;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            color: #fff;
+                            position: relative;
+                            height: 45px;
+                            transition: 1s ease-in-out;
+                            cursor: pointer;
+
+                            @media (max-width:766px) {
+                                background-color: #fff;
+                                color: #000;
+                                font-family: Outfit, sans-serif;
+                                font-size: 18px;
+                                font-style: normal;
+                                line-height: normal;
+                                font-weight: 500;
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                min-height: 46px;
+                            }
+
+                            span {
+                                position: absolute;
+                                transform: translate(32px, -50%);
+                                top: 47%;
+                                width: 100%;
+                                left: 0;
+                                transition: .8s ease-in-out;
+                                text-align: left;
+                            }
+
+                            img {
+                                position: absolute;
+                                right: 32px;
+                                transform: translateY(-100%);
+                                top: 50%;
+                                opacity: 0;
+                                transition: .8s ease-in-out;
+
+                                @media (max-width:766px) {
+                                    display: none;
+                                }
+                            }
+
+                            div {
+                                display: none;
+
+                                img {
+                                    display: none;
+
+                                    @media (max-width:766px) {
+                                        width: 100%;
+                                        display: block;
+                                        position: static;
+                                        opacity: 999;
+                                        transform: none;
+                                    }
+                                }
+
+                                @media (max-width:766px) {
+                                    display: block;
+                                }
+                            }
+
+                            &:hover {
+                                transition: .8s ease-in-out;
+                                background-color: $bg-colo-29;
+
+                                span {
+                                    transform: translate(50%, -50%);
+                                }
+
+                                img {
+                                    opacity: 1;
+                                    transform: translateY(-50%);
+                                    transition: .8s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    overflow: hidden;
+
+                    @media (max-width:766px) {
+                        order: 2;
+                    }
+
+                    .Footer-talkSection {
+                        padding: 0 0 40px;
+
+                        @media (max-width:766px) {
+                            padding: 0 0 28px;
+                        }
+
+                        p {
+                            @include heading-120-outfit;
+
+                            @media (max-width:766px) {
+                                font-size: 64px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                letter-spacing: 0;
+                                text-align: right;
+                            }
+                        }
+                    }
+
+                    .Footer-writeToUs {
+
+                        @media (max-width:766px) {
+                            width: 276px;
+                            margin-left: auto;
+                        }
+
+                        button {
+                            width: 100%;
+                            background-color: #ba0000;
+                            padding: 0 32px;
+                            border-radius: 999px;
+                            border: 2px solid $border-color-f8;
+                            font-family: "Outfit", sans-serif;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            color: #fff;
+                            position: relative;
+                            height: 45px;
+                            transition: 1s ease-in-out;
+                            cursor: pointer;
+
+                            @media (max-width:766px) {
+                                background-color: #fff;
+                                color: #000;
+                                font-family: Outfit, sans-serif;
+                                font-size: 18px;
+                                font-style: normal;
+                                line-height: normal;
+                                font-weight: 500;
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                min-height: 46px;
+                            }
+
+                            span {
+                                position: absolute;
+                                transform: translate(32px, -50%);
+                                top: 47%;
+                                width: 100%;
+                                left: 0;
+                                transition: .8s ease-in-out;
+                                text-align: left;
+                            }
+
+                            img {
+                                position: absolute;
+                                right: 32px;
+                                transform: translateY(-100%);
+                                top: 50%;
+                                opacity: 0;
+                                transition: .8s ease-in-out;
+                            }
+
+                            &:hover {
+                                transition: .8s ease-in-out;
+                                background-color: $bg-colo-29;
+
+                                span {
+                                    transform: translate(73%, -50%);
+                                }
+
+                                img {
+                                    opacity: 1;
+                                    transform: translateY(-50%);
+                                    transition: .8s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        background-color: #fff;
+        color: $hov-text-color-ba;
+
+        .container3 {
+            .Footer-grid {
+                .Footer-gridItems {
+
+                    &:first-child {
+                        color: $hov-text-color-ba;
+                    }
+
+                    .Footer-findContact {
+                        button {
+                            background-color: $bg-color-ba;
+                            color: #fff;
+                        }
+                    }
+
+                    .Footer-writeToUs {
+                        button {
+                            background-color: $bg-color-ba;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

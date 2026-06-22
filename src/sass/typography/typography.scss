@@ -1,0 +1,122 @@
+// @use "../main.scss" as *;
+@use "../theme/theme.scss" as *;
+
+@mixin font-16-outfit {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    // letter-spacing: 0;
+}
+
+@mixin button-18-outfit {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 10px 45px;
+    cursor: pointer;
+    border-radius: 999px;
+    border: 2px solid $border-color-29;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    transition: .8s;
+}
+
+@mixin heading-80-outfit {
+    font-family: "Outfit", sans-serif;
+    color: $text-color-29;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+@mixin font-12-outfit {
+    font-family: "Outfit", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    color: $text-color-29;
+    line-height: 18px;
+}
+
+@mixin button-20-outfit {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    border-radius: 999px;
+    color: #fff;
+    cursor: pointer;
+    background-color: $bg-color-ba;
+}
+
+@mixin heading-64-outfit {
+    font-family: "Outfit", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    // color: #fff;
+}
+
+@mixin heading-34-outfit {
+    font-family: Outfit, sans-serif;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 44px;
+    color: #fff;
+}
+
+@mixin heading-120-outfit {
+    font-family: "Outfit", sans-serif;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 141px;
+    letter-spacing: -5.4px;
+}
+
+@mixin font-18-outfit {
+    display: block;
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    color: #fff;
+    font-weight: 300;
+}
+
+@mixin font-20-outfit {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 700;
+}
+
+@mixin font-24-outfit {
+    display: block;
+    font-family: "Outfit", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 41px;
+}
+
+@mixin heading-18-outfit {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    color: $text-color-36;
+    font-weight: 700;
+}

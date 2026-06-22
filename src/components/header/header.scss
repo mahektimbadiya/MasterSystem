@@ -1,0 +1,329 @@
+@use "../../sass/main.scss" as *;
+@use "../../sass/theme/theme.scss" as *;
+@use "../../sass/typography/typography.scss" as *;
+
+.header-section {
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+    transition: .3s ease-in-out;
+    padding: 10px 0;
+    cursor: pointer;
+
+    @media (max-width:766px) {
+        padding: 9px 12px;
+    }
+
+    .container {
+        max-width: 1274px;
+        margin: 0 auto;
+
+        .header-alignment {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .header-logo {
+                height: 82px;
+
+                @media (max-width:766px) {
+                    height: 59px;
+                }
+
+                a {
+
+                    img {
+                        cursor: pointer;
+                        max-width: 237px;
+                        height: 82px;
+                        max-width: 172px;
+                        height: auto;
+                    }
+
+                    .logo {
+                        max-width: 172px;
+                        height: auto;
+                        display: none;
+                    }
+                }
+            }
+
+            .header-menu {
+                display: flex;
+                align-items: center;
+                gap: 28px;
+
+                @media (max-width:766px) {
+                    display: none;
+                }
+
+                .header-menu-alignment {
+                    a {
+
+                        span {
+                            color: #fff;
+                            @include font-16-outfit;
+                            transition: .3s ease-in-out;
+                        }
+                    }
+
+                    .header-menu-dropdown {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: .3s ease-in-out;
+                        position: fixed;
+                        top: 97px;
+                        background-color: #fff;
+                        left: 0;
+                        width: 100%;
+                        z-index: 9999;
+
+                        .container7 {
+                            max-width: 832px;
+                            margin: 0 auto;
+
+                            .header-dropdown-hoghtbox {
+                                min-height: 400px;
+
+                                .header-dropdowngrid {
+                                    padding: 12px 0 0;
+                                    gap: 0 10px;
+                                    display: grid;
+                                    grid-template-columns: repeat(2, 1fr);
+
+                                    .header-dropdown-box {
+                                        padding: 16px 12px;
+                                        cursor: pointer;
+
+                                        .header-dropdown-boxalign {
+                                            display: flex;
+                                            padding: 0 0 4px;
+                                            align-items: center;
+                                            justify-content: space-between;
+
+                                            span {
+                                                @include font-16-outfit;
+                                                color: $text-color-96;
+                                            }
+
+                                            .header-dropdown-counter {
+                                                border: 1px solid #969696;
+                                                width: 29px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                height: 18px;
+                                                font-family: Outfit, sans-serif;
+                                                font-size: 12px;
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                line-height: normal;
+                                                border-radius: 20px;
+                                                color: #969696;
+                                            }
+                                        }
+
+                                        .header-dropdown-detail {
+                                            padding: 0 0 4px;
+                                            position: relative;
+
+                                            p {
+                                                @include font-16-outfit;
+                                                font-weight: 300;
+                                                color: $text-color-96;
+                                                position: relative;
+
+                                                &::before {
+                                                    width: 100%;
+                                                    position: absolute;
+                                                    left: 0;
+                                                    bottom: -4px;
+                                                    transition: .3s ease-in-out;
+                                                    content: "";
+                                                    border-bottom: 1px solid $border-color-96;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+
+                        .header-menu-dropdown {
+                            max-height: 100vh;
+                            overflow: hidden;
+                            transition: .3s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .header-button {
+                display: flex;
+                align-items: center;
+                gap: 41px;
+
+                @media (max-width:766px) {
+                    display: none;
+                }
+
+                button {
+                    background-color: transparent;
+                    @include button-18-outfit;
+                    border: 2px solid #fff;
+                    color: #fff;
+
+                    &::after {
+                        content: "";
+                        background-color: #ba0000;
+                        display: block;
+                        height: 40%;
+                        left: 50%;
+                        position: absolute;
+                        top: 0;
+                        border-radius: 999px;
+                        transform: translate(-50%, -100%);
+                        transition: .8s;
+                        width: 40%;
+                        z-index: -1;
+                    }
+
+                    &:hover {
+                        color: #fff;
+                        border-color: $hov-border-color-ba;
+
+                        &::after {
+                            border-radius: 999px;
+                            transform: translate(-50%);
+                            height: 120%;
+                            width: 120%;
+                        }
+                    }
+                }
+            }
+
+            .header-mobile-menu {
+                display: none;
+                // position: relative;
+
+                @media (max-width:766px) {
+                    display: block;
+                }
+
+                svg {
+                    color: #fff;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .mobile-menu-hover {
+                    position: absolute;
+                    background-color: #fff;
+                    transition: .3s ease-in-out;
+                    width: 0;
+                    height: 0;
+                    text-align: center;
+
+                    .header-menu-alignment {
+                        a {
+
+                            span {
+                                color: #000;
+                                @include font-16-outfit;
+                                transition: .3s ease-in-out;
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+
+                    .mobile-menu-hover {
+                        width: 25%;
+                        height: auto;
+                        top: 100%;
+                        right: 0;
+                        transition: .3s ease-in-out;
+
+                        .header-menu-alignment {
+                            a {
+
+                                span {
+                                    color: #000;
+                                    @include font-16-outfit;
+                                    transition: .3s ease-in-out;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        background-color: #fff;
+
+        .container {
+
+            .header-alignment {
+
+                .header-logo {
+
+                    a {
+                        .WhiteLogo {
+                            display: none;
+                        }
+
+                        .logo {
+                            display: block;
+                        }
+                    }
+                }
+
+                .header-menu {
+
+                    .header-menu-alignment {
+
+                        a {
+
+                            span {
+                                color: $text-color-29;
+
+                                &:hover {
+                                    transition: .3s ease-in-out;
+                                    color: $hov-text-color-ba;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .header-button {
+
+                    button {
+                        border: 2px solid $border-color-29;
+                        color: $text-color-29;
+
+                        &:hover {
+                            color: #fff;
+                            border-color: $hov-border-color-ba;
+                        }
+                    }
+                }
+
+                .header-mobile-menu {
+
+                    svg {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}

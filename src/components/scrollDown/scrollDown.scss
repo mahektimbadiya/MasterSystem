@@ -1,0 +1,36 @@
+@use "../../sass/main.scss" as *;
+@use "../../sass/theme/theme.scss" as *;
+@use "../../sass/typography/typography.scss" as *;
+
+.ScrollDown-section {
+    padding: 32px 0 48px;
+    cursor: pointer;
+
+    .container {
+        max-width: 1274px;
+        margin: 0 auto;
+
+        .ScrollDown-content {
+            transition: .3s ease-in-out;
+
+            .ScrollDown-iconcenter{
+                text-align: center;
+                padding: 0 0 4px;
+            }
+
+            span{
+                @include font-12-outfit;
+                line-height: normal;
+                font-weight: 600;
+                text-align: center;
+                cursor: pointer;
+                display: block;
+            }
+
+            &:hover{
+                opacity: .5;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+}

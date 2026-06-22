@@ -1,0 +1,198 @@
+@use "../../../sass/main.scss" as *;
+@use "../../../sass/theme/theme.scss" as *;
+@use "../../../sass/typography/typography.scss" as*;
+
+.ourStory-Section {
+
+    .container4 {
+        max-width: 1275px;
+        margin: 0 auto;
+
+        .OurStory-childText {
+
+            span {
+                display: block;
+                @include font-12-outfit;
+                color: $text-color-59;
+                line-height: normal;
+                text-transform: uppercase;
+
+                @media (max-width:766px) {
+                    padding: 0 8px;
+                }
+            }
+        }
+
+        .OurStory-titleAlignment {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0 40px;
+            border-bottom: 4px solid $border-color-29;
+
+            @media (max-width:766px) {
+                margin: 0 8px;
+                padding: 0 0 24px;
+                border-bottom: 2px solid $border-color-29;
+            }
+
+            h4 {
+                @include heading-64-outfit;
+                color: $text-color-29;
+
+                @media (max-width:766px) {
+                    @include heading-34-outfit;
+                    color: $text-color-29;
+                }
+            }
+
+            .OurStory-counter {
+                border: 2px solid $border-color-29;
+                display: flex;
+                align-items: center;
+                border-radius: 999px;
+                justify-content: center;
+                padding: 8px 24px;
+                color: $text-color-29;
+                font-weight: 500;
+
+                @media (max-width:766px) {
+                    padding: 10px 20px;
+                    font-family: "Outfit", sans-serif;
+                    font-size: 16px;
+                    font-style: normal;
+                    border-radius: 113px;
+                    letter-spacing: 0;
+                    font-weight: 500;
+                    line-height: 19px;
+
+                }
+
+                span {
+                    @include font-24-outfit;
+
+                    @media (max-width:766px) {
+                        @include font-16-outfit;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+
+        .OurStory-grid {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            padding: 40px 0 0;
+            gap: 32px;
+
+            @media (max-width:766px) {
+                grid-template-columns: repeat(1,1fr);
+                gap: 24px;
+                padding: 24px 0 0;
+            }
+
+            .OurStory-gridItems {
+
+                &:first-child {
+
+                    .OurStory-image {
+
+                        img {
+                            width: 100%;
+                            height: 650px;
+                            object-fit: cover;
+
+                            @media (max-width:766px) {
+                                height: 244px;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    @media (max-width:766px) {
+                        padding: 0 8px;
+                    }
+
+                    h6 {
+                        @include heading-18-outfit;
+                        margin: 0 0 16px;
+                    }
+
+                    p {
+                        @include font-18-outfit;
+                        color: $text-color-36;
+                        margin: 0 0 28px;
+
+                        @media (max-width:766px) {
+                            @include font-16-outfit;
+                            font-weight: 300;
+                            letter-spacing: 0;
+                            max-width: 368px;
+                            margin: 0 0 16px;
+                        }
+                    }
+
+                    .OurStory-waveicon {
+                        padding: 0 0 28px;
+                        border-bottom: 2px solid $border-color-29;
+                        @media (max-width:766px) {
+                            padding: 0 0 16px;
+                        }
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+
+                    .OurStory-button {
+                        padding: 28px 0 0;
+                        @media (max-width:766px) {
+                            padding: 16px 0 0;
+                        }
+
+                        button {
+                            @include button-18-outfit;
+                            padding: 10px 29px;
+                            background-color: transparent;
+                            @media (max-width:766px) {
+                                background-color: $bg-color-ba;
+                                color: #fff;
+                                border: 2px solid #fff;
+                            }
+
+                            &::after {
+                                content: "";
+                                background-color: #ba0000;
+                                display: block;
+                                height: 40%;
+                                left: 50%;
+                                position: absolute;
+                                top: 0;
+                                border-radius: 999px;
+                                transform: translate(-50%, -100%);
+                                transition: .8s;
+                                width: 40%;
+                                z-index: -1;
+                            }
+
+                            &:hover {
+                                border-color: #ba0000;
+                                color: #fff;
+
+
+                                &::after {
+                                    background-color: #ba0000;
+                                    border-radius: 999px;
+                                    transform: translate(-50%);
+                                    height: 120%;
+                                    width: 120%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
