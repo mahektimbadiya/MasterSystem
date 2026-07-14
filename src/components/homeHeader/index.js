@@ -2,6 +2,7 @@ import React from "react";
 import "./homeHeader.scss"
 import Logo from "../../assets/logo/black-logo.png"
 import { Menu } from "lucide-react";
+import { NavLink } from "react-router";
 
 export default function HomeHeader() {
     return (
@@ -15,9 +16,9 @@ export default function HomeHeader() {
                     </div>
                     <div className="home-header-menu">
                         <div className="home-header-menu-alignment">
-                            <a>
+                             <NavLink to={"/compony"}>
                                 <span>Company</span>
-                            </a>
+                            </NavLink>
                             <div className="home-header-menu-dropdown">
                                 <div className="container7">
                                     <div className="home-header-dropdown-hoghtbox">
